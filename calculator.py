@@ -36,7 +36,7 @@ def main() -> None:
         result = calculate(args.operation, args.left, args.right)
     except ValueError as exc:
         print(f"Error: {exc}", file=sys.stderr)
-        raise SystemExit(2) from exc
+        raise SystemExit(1) from exc
 
     print(result)
 
