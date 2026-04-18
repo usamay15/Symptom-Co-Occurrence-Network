@@ -34,3 +34,15 @@ G = nx.node_link_graph(data)
 
 # Example: print basic info
 print(nx.info(G))
+```
+
+## Calculator
+
+This repository also includes a simple calculator script:
+
+```bash
+python calculator.py add 10 5
+python calculator.py sub 10 5
+python calculator.py mul 10 5
+python calculator.py div 10 5
+```
