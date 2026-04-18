@@ -10,11 +10,11 @@ import sys
 def calculate(operation: str, left: float, right: float) -> float:
     if operation == "add":
         return left + right
-    if operation == "sub":
+    elif operation == "sub":
         return left - right
-    if operation == "mul":
+    elif operation == "mul":
         return left * right
-    if operation == "div":
+    elif operation == "div":
         if right == 0:
             raise ValueError("Division by zero is not allowed.")
         return left / right
@@ -36,7 +36,7 @@ def main() -> None:
         result = calculate(args.operation, args.left, args.right)
     except ValueError as exc:
         print(f"Error: {exc}", file=sys.stderr)
-        raise SystemExit(1) from exc
+        sys.exit(1)
 
     print(result)
 
